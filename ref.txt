@@ -39,9 +39,9 @@ Coding Conventions
 --------------------
     Naming Conventions
 
-        class names             -- camel case 
-        method 
-        variables 
+        Class names             -- first letter capital
+        method                  - camelCase
+        variables               - camelCase
 
 
     Coding Terminologies 
@@ -84,6 +84,128 @@ JDK - java development kit
 Java
 ------- 
     - object oriented programming language 
+
+class 
+
+objects 
+
+Data types 
+------------
+    1. primitive types 
+        - there are 8 primitive types 
+        - primitive types represent values directly 
+
+        byte        1 byte      -128 to 127
+        short       2 bytes     -32768 to 32767
+        int         4 bytes     .. to ..
+        long        8 bytes 
+        float       4 bytes 
+        double      8 bytes 
+        char        1 byte
+        boolean     1 bit
+
+    2. reference types 
+        - variables of class / interface are called ref types
+        - Employee / String / etc. 
+        - ref type variables represent address of object 
+                in the memory 
+
+Variable types 
+-----------------
+
+    1. local variable 
+        - variables declared inside a method / constructor or block 
+        - memory is allocated when the method is called / executed 
+                and the memory is destroyed when the method ends the execution
+        - local variables must be initialized before first use 
+
+    2. Instance variable 
+        - Variables declared inside a class are called instance variables 
+        - we can use access modifiers i.e. default / public / private / protected 
+                to specify their accessibility 
+        - memory for instance variables is allocated when the Object 
+                is created using "new" keyword 
+
+                Customer customer = new Customer()
+
+        - memory for instane var will be deleted when the object is 
+            destroyed 
+        - instance variables have default values 
+                numbers     = 0
+                booleans    = false 
+                ref types   = null
+
+    3. static variable 
+        - static variables are declared inside the class using 'static' keyword 
+        -  we can use access modifiers i.e. default / public / private / protected 
+                to specify their accessibility 
+        - only **one copy of the static variable will be allocated per class
+        - memory for static variable will be allocated when the class is loaded 
+
+
+Garbadge Collection 
+    - GC will automatically delete the objects which are unreferenced   
+
+
+
+Static keyword 
+-----------------
+
+    - static variables 
+
+    - static methods 
+
+final keyword 
+----------------
+    - final variables 
+            - cannot be modified 
+
+    - final methods 
+            - cannot be overridden 
+
+    - final classes 
+            - cannot be subclassed / inherited 
+
+
+Scanner 
+----------
+    - Scanner class belongs to java.util package 
+    - it is used to perform input operations i.e. input data from keyboard or a file or from any other input source 
+
+
+System.in
+-----------
+    - "in" object in system class represents the default input stream which is connected
+            with the standard keyboard
+            
+
+
+Encapsulation 
+----------------
+    - hiding the properties from external world 
+    - a properly encapsulated class...
+        - has all the members declared as private 
+        - has appropriate public getter / setter methods for each instance members
+        - has a default constructor to initialize default values 
+
+class BankAccount {
+
+    private int accoutNo;
+    private double balance;
+
+
+    public void setAccountNo(){
+
+    }
+
+    public void setBalance(double amount){
+        //criteria / logic / condition
+        this.balance = amount;
+    }
+
+}
+
+
 
 
 Class 
