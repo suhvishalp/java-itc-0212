@@ -177,7 +177,7 @@ System.in
 -----------
     - "in" object in system class represents the default input stream which is connected
             with the standard keyboard
-            
+
 
 
 Encapsulation 
@@ -205,10 +205,84 @@ class BankAccount {
 
 }
 
+Decision making statements 
+    - if 
+    - if - else 
+    - if - else if - else 
+    - switch 
+
+logical operators 
+
+relational operator 
+
+Looping Statements 
+
+    - while loop 
+
+    - do - while loop 
+
+    - for loop 
 
 
+Array 
+--------
+    - group / list of similar items / elements 
+    - in java, arrays are objects
+    - array has fixed length
+    - once array object is created, we cannot change its size 
 
-Class 
+    declare an array variable
+    ---------------------------
+
+        <data-type>[] arrVarName;
+
+        int[] numbers;  //prefered syntax
+        int [] numbers;
+        int []numbers;
+        int numbers[];
+
+    Create an Array 
+    --------------------------
+        arrVarName = new <data-type>[size];
+
+        numbers = new int[5];
+
+    Initialize array values 
+    --------------------------------
+
+        numbers = new int[5];
+        numbers[0] = 10
+        numbers[1] = 20;
+        ..
+        ..
+        ..
+
+       numbers = new int[]{10,20,30,40,50} ;
+
+       numbers = {10,20,30,40,50};
 
 
-Object 
+ 
+
+       String class 
+       --------------
+            - String are immutable
+
+            - create a String object 
+
+            String s1 = "Welcome";      //string literal
+
+            String s2 = "Welcome";
+
+            **whenever you create a string using String literal 
+                it creates the String object in "String pool" only if it dones't exit 
+
+            
+            String s3 = new String("Welcome");
+
+
+        StringBuilder class /  StringBuffer class   
+                - are used to create immutable string 
+                - *StringBuffer allows to crate thread-safe strings
+
+        
