@@ -1,0 +1,92 @@
+Vishal 
+
+
+Languages                       Libraries/Packages/modules              Frameworks
+------------                    --------------------------              ------------
+
+C / C++                         ---
+
+Python                          ---                                         Django / Flask
+
+Java                            standard libraires                         Spring 
+                                    io / sql / jdbc / lang / util
+                                3rd party libraries 
+                                    --
+C# / VB                         ---                                         .NET Framework 
+
+Go                              ----                                        ---
+
+JavaScript / TypeScript         JQuery / bootstrap / reactjs                Angular
+
+    |                                   |                                   |
+provides programming            simplify your tasks                     standardize the process
+capabilities                                                            of developing the app
+
+
+
+Package management tools / deployment tools 
+    - Mavan / Gradle
+
+CI/CD tools / continuous Integration - Continuous Delivery
+
+
+VCS / version control systems 
+    - git 
+    - 
+
+
+Coding Conventions 
+--------------------
+    Naming Conventions
+
+        class names             -- camel case 
+        method 
+        variables 
+
+
+    Coding Terminologies 
+
+            BO - Business Objects 
+
+            SO - Service objects 
+
+            DAO - Data access objects 
+
+            POJO - plain old java object 
+
+            Java Beans 
+
+            DTO - Data transfer objects 
+
+
+
+
+
+
+
+.java file   ------------------>    .class file  ------------> execute on your machine
+             compile (javac)        (byte code)      jvm 
+
+
+**Byte code = it is an intermediate code which understandable only to JVM
+
+JVM - Java Virtual Machine 
+    - it is responsible to execute the byte code on your machine 
+
+JRE - java runtime environment 
+    - JVM + standard libraries 
+
+JDK - java development kit 
+    - jre + development tools i.e .javac, java, jar etc. 
+
+
+
+Java
+------- 
+    - object oriented programming language 
+
+
+Class 
+
+
+Object 
