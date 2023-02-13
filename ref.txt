@@ -281,8 +281,366 @@ Array
             String s3 = new String("Welcome");
 
 
+        String class methods 
+        ---------------------
+
+            String concat(String s)
+
+            String substr()
+
+            String replace()
+
+            boolean equals(String s)
+
+            boolean equalsIgnoreCase(Strijg s)
+
+            boolean startsWith(String s)
+
+            boolean endsWith(String s)
+
+            chat charAt(int index)
+
+            int indexOf(String str)
+
+            ..
+
+
+
         StringBuilder class /  StringBuffer class   
                 - are used to create immutable string 
                 - *StringBuffer allows to crate thread-safe strings
 
         
+    Class 
+    ---------
+        - a class is a blueprint for objects that represents some data and behavior 
+        - a class is a user defined data type 
+
+
+        class Employee {
+
+        }
+
+        class BankAccount {
+
+        }
+
+    object 
+    ----------
+        - an object is instance of a class 
+
+            Employee e1 = new Employee() 
+
+
+    Object class 
+    --------------
+        - in java, every class is implicitely subclass of Object class 
+        - Object is the supermost class for all the classes 
+
+                    Object 
+                      |
+        -----------------------------------------------------------------------
+        String      StringBuilder       ..          Employee        Customer 
+
+
+        - Object class methods 
+        --------------------------------
+            - boolean equals(Object obj)
+            - int hashCode()
+            - String toString()
+
+
+
+    class Employee {
+
+            //instance variables 
+            //static variables
+
+            //constructor 
+
+            //instance methods
+            //static methods 
+            //abstract methods
+
+            //inner classes / interface
+
+
+    }
+
+
+    Constructor 
+    -----------------------
+        - it is a special method of a class, which has same name as its class 
+        - it is used to initialize values for the instance variables / data members 
+        - it is called automatically when the object created
+
+        class Employee {
+
+                public Employee(){          //constructor
+
+                }
+
+        }
+
+
+        Method Overloading 
+        ------------------------
+            - multiple methods with same name but diff parametes 
+            - the right method to be invoked is decided at compile time 
+            - this is called static binding / compile time polymorphism 
+
+
+
+    Inheritance
+    --------------
+        - IS-A relationship 
+        - all the non-private members of the superclass are accessible to subclass 
+
+            Person 
+              |
+              |
+              -----------------------------------
+           Employee                             |
+              |                                 |
+    ---------------------------                 |
+     |                          |                 |
+    Accountant              Teacher         Student 
+
+
+    class Person {
+
+    }
+
+    class Employee extends Person {
+
+    }
+
+
+    Abstract Class 
+    ------------------
+
+                        BankAccount
+                            |
+                ---------------------------------------
+                SavingBankAcc               LoanBankAcc
+
+
+
+       abstract  class BankAccount{
+            
+            //data members i.e. accno, balance, customerId, ...
+
+            public abstract  void openAccount();
+
+            public void calcInterest(double intRate){
+
+            }
+
+        }
+
+        class SavingBankAcc extends BankAccount {
+
+            //override the inherited method
+             public void openAccount(){
+                 //some specific process of opening a saving acc
+             }
+        }
+
+        class LoanBankAcc extends BankAccount {
+
+        }
+
+
+        Method  Overriding 
+        -----------------------
+            - redefine the inherited method in the child class to implement a 
+                child specific behavior 
+            - redefining the super class method in subclass is called overriding 
+
+            - overridden method must have same signature as per super class 
+                    same method name, same parameters, same return type 
+
+
+
+        class Car {
+
+            void move(){
+
+            }
+        }
+
+        class BMWCar extends Car {
+
+        }
+
+        class MeredesCar extend Car{
+
+        }
+    
+
+    **the superclass variable can reference object of its child type
+
+    polymorphism:
+    ----------------
+        - perform diff tasks but with the same interface 
+        - many forms of the same interface 
+        - run time polymorphism (dynamic binding) - a variable can point to diff types at diff times 
+            so the right method to be called is selcted at run time, based on the type of 
+                object the variable is pointing to..
+
+
+    
+
+    Abstract Method 
+    -----------------
+        - a method declared using 'abstract' keyword and without definition 
+        - if a class contains any abstract method then the class must be abstract
+        - if the superclass contains abstract methods then it must be overridden in the subclass
+                - abstract methods must be overridden in the immediate subclass 
+
+
+
+        Abstract Class 
+        -----------------------
+            - abstract classes cannot be instantiated / we cannot create object of 
+                abstract Class 
+            - it can act just as a superclass to represent all the common data / behavior 
+
+
+            abstract class A {
+
+                    
+            }
+
+
+        1. Encapsulation - binding data and code together 
+        2. Abstraction - hinding complexity from outside world
+        3. Inheritance - reusing the superclass's data / behavior, deriving another class from parent class 
+        4. polymorphism - same interface many tasks 
+                                - method overloading 
+                                    - inside a single class, multiple methods with same name but diff params 
+                                    - happens at compile time
+                                    - static binding 
+                                - method overriding
+                                    - redefining superclass method in child class with same signature 
+                                    - happens at runtime 
+                                    - dynamic binding 
+
+Interface 
+-------------
+    - interface contains only abstract methods 
+    - a class implements an interface / several interface
+    - the class which implements the interface must override the abstract methods 
+    - an interface is a set of requirements a class has to implement 
+
+
+            interface Taxable {
+                    public abstract void calcTax(double taxRate);
+                    //
+            }
+
+            class ElectronicProduct extends Product implements Taxable {
+
+                    public void calcTax(double taxRate){
+                        //implement the method
+                    }
+            }
+
+            class Toy implements Taxable {
+
+                    public void calcTax(double taxRate){
+                        //implement the method
+                    }
+            }
+
+
+    ==========================================================================
+
+    Standard Libraries 
+    ----------------------
+
+            java.lang 
+                - System 
+                - String 
+                - StringBuilder
+                - StringBuffer 
+
+
+            Wrapper classes 
+            -----------------
+                - for each primitive type in java, there are corresponding ref types available
+                - these classes are called wrapper classes
+                    1. to perform some conversions i.e. string to integer 
+                    2. to treat primitive types as ref types 
+
+            primitive types                     Ref Types
+
+                byte                            Byte 
+                short                           Short 
+                int                             Integer 
+                long                            Long 
+                float                           Float 
+                double                          Double 
+                char                            Character
+                boolean                         Boolean 
+        
+
+           String s = "10";
+           
+                   Integer.parseInt(s)
+
+            char ch = '3';
+
+
+
+            Array 
+            --------
+                - fixed length collection of elements 
+
+
+            java.util package 
+            -------------------
+                - Collection Framework 
+                    - using collection framework you can create collection / group of objects
+
+
+
+                    Collection<T> interface 
+                            |
+                            |
+            -----------------------------------------------------------------------
+            List<T> interface             Set<T> interface            Queue<T> interface
+                |                           |                               |
+                |                           |                               |
+            ArrayList<T>                HashSet<T>                      ArrayDeque
+            LinkedList<T>               LinkedHashSet<T>                ArrayBlockingQueue
+            Vector<T>                   TreeSet<T>                      ArrayBlockingDQueue
+            Stack<T>    
+
+
+ Collection<T> interface 
+    - it is the super interface for all the collection interfaces and classes 
+    - it describes the common methods for all the collection classes 
+    - methods 
+
+            void add(Element e)
+            void addAll(Collection c)
+            void remove(Element e)
+
+List<T> interface
+    - List interface models a collection index based items 
+    - Implementation classes of LIst interface are... 
+            ArrayList<T>
+            LinkedList<T>
+            Vector<T>
+            Stack<T>
+
+Set<T> interface
+    - set interface models a collection of unique elements / it doesn't allow duplicate
+    - Implementation classes of LIst interface are... 
+            HashSet
+            LinkedHashSet
+            TreeSet
+
+Queue<T> interface
+    - Queue interface models a collection of elements which are accessed as a queue 
