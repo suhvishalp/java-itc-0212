@@ -2,7 +2,7 @@ package rop.licenseapp.bo;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	
 	private int empId;
 	private String empName;
@@ -53,6 +53,11 @@ public class Employee {
 	}
 
 	@Override
+	public String toString() {
+		return "\n\t Employee [empId=" + empId + ", empName=" + empName + ", city=" + city + ", salary=" + salary + "]";
+	}
+
+	@Override
 	public int hashCode() {
 		return Objects.hash(empId, empName, salary);
 	}
@@ -69,18 +74,16 @@ public class Employee {
 		return empId == other.empId && Objects.equals(empName, other.empName)
 				&& Double.doubleToLongBits(salary) == Double.doubleToLongBits(other.salary);
 	}
+
+	@Override
+	public int compareTo(Employee o) {
+		// TODO Auto-generated method stub
+		return this.empName.compareTo(o.empName);
+	}
+
 	
-//	public boolean equals(Object obj) {
-//		Employee otherEmp = (Employee) obj;
-//		
-//		if(this.empId == otherEmp.empId &&
-//				this.empName.equals(otherEmp.empName) && 
-//				this.city.equals(otherEmp.city) && 
-//				this.salary == otherEmp.salary)
-//			return true;
-//		
-//		return false;
-//	}
+	
+
 	
 	
 	

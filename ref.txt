@@ -479,6 +479,9 @@ Array
     
 
     **the superclass variable can reference object of its child type
+    **A variable of type interface can reference to an object of its implementation class 
+
+
 
     polymorphism:
     ----------------
@@ -644,3 +647,63 @@ Set<T> interface
 
 Queue<T> interface
     - Queue interface models a collection of elements which are accessed as a queue 
+
+
+    Learn@ohi23
+
+
+
+
+      ArrayList<T>
+      ----------------      
+        - used to create index based collection of items 
+        - internally uses 'resizable-array' as data structure
+
+
+        Create ArrayList 
+        -------------------
+
+            ArrayList list = new ArrayList();       //non-generic list
+            ArrayList<Integer> list = new ArrayList<>();      //generic list
+
+            List list = new ArrayList();    //non-generic 
+            List<String> names = new ArrayList<>(); //generic list
+            
+            
+            
+        LinkedList<T>
+        ---------------
+               - used to create index based collection of items 
+               - internally uses 'double linked list' as data structure
+
+
+        HashSet<T>
+            - stores unique collection of elements, doesn't allow duplicates 
+            - it doesn't gurantee the order of insertion
+
+        LinkedHashSet<T>
+            - maintains insertion order 
+
+        TreeSet<T>
+            - maintains sorted order of elements 
+
+
+
+
+    Stream API 
+    -------------
+        - using stream api we can process collections 
+
+
+        interface Taxable {
+            public abstract void calcTax(double taxRate);
+        }
+
+       
+
+        Taxable taxableItem = new Taxable(){
+            public void calcTax(double taxRate){
+                sysout("Calculate tax");
+                //....
+            }
+        }
