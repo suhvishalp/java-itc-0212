@@ -707,3 +707,117 @@ Queue<T> interface
                 //....
             }
         }
+
+Exception Handling
+--------------------
+    - Exception is an abnormal situation    
+
+                            Exception 
+                                |
+        ----------------------------------------------------------------
+        RuntimeException               
+        
+
+
+        InputMismatchException
+        ArrayIndexOutOfBoundException
+        ArithmeticException
+        ..
+        ..
+        ..
+
+
+
+    - there are two types of exceptions 
+
+        1. checked expcetions 
+
+        2. unchecked exceptions 
+                - no need to write try-catch block, or no need to write any 
+                    exception handling code 
+                - these exceptions are by default handled by JVM 
+                - **how does jvm handles the exceptions by default 
+                        1. JVM checks whether there is any code to handle it or not ?
+                        2. if there is no any ex handling code, then JVM will create the object of the Exception type 
+                        3. it will stop the execution of the program from that line, where the exception has occured 
+                        4. jvm will throw the exception and print the stack trace 
+
+
+
+
+Set<Member> membersSet = new HashSet<>();
+
+//membersSet.add(member1)
+//
+//
+//
+
+//
+    Enter memberid to find : ??     //      5
+    int memberid = scan.nextInt();      //5
+    Member m = null;
+    for(Member member : membersSet){
+        if(member.getMemberId() == memberid){
+            m = member;
+        }
+    }
+
+    return m;
+
+
+
+    Multi-threading / concurrency 
+    ------------------------------------------
+        - executing multiple tasks simultanously at the same time 
+        - there are two ways to implements threading 
+
+                1. using low level programming using Thread class or Runnable interface 
+
+                        a. create a custom thread class using "Thread" class 
+
+                            class MyThread extends Thread {
+                                --override the run method to define the task / connected
+                                public void run() {
+                                        //code
+	                            }
+                            }
+
+                        b. create a "Runnable" task using "Runnable" interface 
+                            - execute the runnable task using Thread class 
+
+
+                2. using Concurrency Package
+
+                        java.util.concurrent: provides utility classes commonly useful in concurrent programming such as 
+                            executors, threads pool management, 
+                            scheduled tasks execution, 
+                            the Fork/Join framework, concurrent collections, etc.
+
+
+
+
+
+class SomeClass {
+
+    //instance variables 
+    //constructors
+    //instance methods 
+
+    class InnerClass {              //inner class 
+
+        //logic 
+        //access members of enclosing class
+    }
+
+    static class SomeOtherInnerClass {      //nested class
+
+    }
+
+}
+
+SomeClass someClassObject = new Someclass();
+someClassObject.InnerClass ic = new someClassObject.InnerClass();
+
+SomeClass.SomeOtherInnerClass var = new SomeClass.SomeOtherInnerClass()
+
+suhvishal@gmail.com 

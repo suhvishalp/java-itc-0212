@@ -8,7 +8,7 @@ public class StringDemo {
 		String s1 = "Welcome";
 		
 		
-		System.out.println(s1==s2);
+		//System.out.println(s1==s2);
 	}
 
 }
