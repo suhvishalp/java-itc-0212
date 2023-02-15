@@ -52,9 +52,13 @@ public class Employee implements Comparable<Employee>{
 		this.salary = salary;
 	}
 
+	
+	
+	
+
 	@Override
 	public String toString() {
-		return "\n\t Employee [empId=" + empId + ", empName=" + empName + ", city=" + city + ", salary=" + salary + "]";
+		return "Employee Name :" + this.empName + "\n City : " + this.city;
 	}
 
 	@Override
