@@ -876,3 +876,27 @@ Lambda expression
 
      Addition add1 =  i -> sysout(i)
     
+
+
+        interface Consumer<T> {
+            public abstract void accept(T t);
+        }
+
+        Consumer<Integer> consumer1 = new Consumer(){
+            void accept(Integer item){
+                sysout(item)
+            }
+        }
+
+         Consumer<Integer> consumer1 = item ->  sysout(item)
+            
+        }
+
+
+        interface Predicate<T>{
+            boolean test(T t)
+        }
+
+        Predicate<Integer> predicate1 = new Predicate() {
+            
+        }
