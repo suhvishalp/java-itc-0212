@@ -821,3 +821,58 @@ someClassObject.InnerClass ic = new someClassObject.InnerClass();
 SomeClass.SomeOtherInnerClass var = new SomeClass.SomeOtherInnerClass()
 
 suhvishal@gmail.com 
+
+
+
+
+DateTime API in Java 1.8 
+------------------
+
+    LocalDate   - represent a date 
+    LocalTime   - represent a time 
+    LocalDateTime - represent date & time 
+
+Read more about date time api -->
+    https://www.baeldung.com/java-8-date-time-intro
+
+
+
+Funcational Interface in Java 1.8
+----------------------------------------
+
+        A funcitonal interface is an interface which has only 1 abstract method 
+
+        
+        interface Taxable {
+            public abstract void calcTax(double taxRate, double amount);
+        }
+
+    Read more about functional interfaces -->
+        https://www.baeldung.com/java-8-functional-interfaces
+        https://medium.com/swlh/understanding-java-8s-consumer-supplier-predicate-and-function-c1889b9423d
+
+
+Lambda expression 
+--------------------
+    - lambda expression can be used only to implement a functional interface 
+
+    interface Addition{
+	    public abstract void add(int i);
+    }
+
+    Addition add1 = new Addition(){
+        void add(int i){
+            //..
+        }
+    }
+
+    Addition add1 = (int i)-> {
+            sysout(i)
+    }
+
+     Addition add1 = (int i)-> sysout(i)
+
+     Addition add1 = (i)-> sysout(i)
+
+     Addition add1 =  i -> sysout(i)
+    

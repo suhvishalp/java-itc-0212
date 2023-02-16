@@ -21,11 +21,22 @@ public class ListDemo1 {
 		
 		numsList.add(1, 100);	
 		
-		Collections.shuffle(numsList);
+		numsList
+			.stream()
+			.forEach(item -> System.out.println(item));
+		
+		
+		
+		
+		
+		
+		
+		
+//		Collections.shuffle(numsList);
 		
 //		Collections.sort(numsList);
 
-		System.out.println(numsList);
+//		System.out.println(numsList);
 		
 //		System.out.println(numsList.get(3));
 		
